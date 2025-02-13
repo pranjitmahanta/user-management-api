@@ -16,6 +16,14 @@ More?      -d "{\"email\": \"alice@example.com\", \"password\": \"securepass\"}"
 {"message":"Invalid credentials"}
 
 
+C:\Users\pranjit>curl -X POST "http://localhost:5000/api/login" ^
+More?      -H "Content-Type: application/json" ^
+More?      -d "{\"email\": \"alice@example.com\", \"password\": \"mypassword\"}"
+
+{"token":"#"}
+
+
+
 C:\Users\pranjit>curl -X GET "http://localhost:5000/api/users" ^
 More?      -H "Authorization: Bearer #"
 
